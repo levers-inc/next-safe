@@ -1,5 +1,5 @@
 {
-  "name": "next-safe",
+  "name": "@levers-inc/next-safe",
   "version": "0.0.0-development",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
@@ -24,5 +24,7 @@
     "type": "git",
     "url": "https://github.com/trezy/next-safe.git"
   },
-  "dependencies": {}
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
