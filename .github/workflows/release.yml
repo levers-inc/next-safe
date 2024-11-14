@@ -17,11 +17,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
+
+      - name: Config registry to @levers-inc
+        run: echo "@levers-inc:registry=https://npm.pkg.github.com/" > ~/.npmrc
+
+      - name: Config authentication to @levers-inc
+        run: echo "//npm.pkg.github.com/:_authToken=\"$NPM_TOKEN\"" >> ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.BOT_TOKEN }}
 
       - name: Install Yarn Berry
         run: |
