@@ -26,5 +26,6 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  }
+  },
+  "packageManager": "yarn@4.5.1"
 }
