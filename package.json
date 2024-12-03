@@ -1,22 +1,38 @@
 {
-  "name": "next-safe",
-  "version": "0.0.0-development",
+  "name": "@levers-inc/next-safe",
+  "version": "0.0.0",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
-  "main": "lib/index.js",
-  "types": "types/types.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./types/types.d.ts"
+    }
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./types/types.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
+    "build": "rollup -c",
     "build-types": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
-    "prepublish": "yarn build-types",
-    "semantic-release": "semantic-release",
+    "preversion": "yarn test && yarn build && yarn build-types",
+    "postversion": "npm publish",
     "test": "jest"
   },
   "peerDependencies": {
     "next": "^9.5.0 || ^10.2.1 || ^11.1.0 || ^12.1.0 || ^13.0.0 || ^14.0.0 || ^15.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "jest": "^26.6.3",
     "jsdoc": "^3.6.7",
+    "rollup": "^4.28.0",
     "semantic-release": "^18.0.0",
     "tsd-jsdoc": "^2.5.0"
   },
@@ -24,5 +40,5 @@
     "type": "git",
     "url": "https://github.com/trezy/next-safe.git"
   },
-  "dependencies": {}
+  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
 }
