@@ -782,6 +782,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@levers-inc/next-safe@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@levers-inc/next-safe@workspace:."
+  dependencies:
+    "@rollup/plugin-commonjs": "npm:^28.0.1"
+    "@rollup/plugin-node-resolve": "npm:^15.3.0"
+    jest: "npm:^26.6.3"
+    jsdoc: "npm:^3.6.7"
+    rollup: "npm:^4.28.0"
+    semantic-release: "npm:^18.0.0"
+    tsd-jsdoc: "npm:^2.5.0"
+  peerDependencies:
+    next: ^9.5.0 || ^10.2.1 || ^11.1.0 || ^12.1.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -6343,22 +6359,6 @@ __metadata:
   checksum: 10c0/e19e17d7bd91dfcb1acd07cbdd8df1f0613f3408227538fe91793c6dfcf58e95b5f18b88b4a13e9b31587e89a119fd76d6df4b8d8c65564dd2c409d787819583
   languageName: node
   linkType: hard
-
-"next-safe@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "next-safe@workspace:."
-  dependencies:
-    "@rollup/plugin-commonjs": "npm:^28.0.1"
-    "@rollup/plugin-node-resolve": "npm:^15.3.0"
-    jest: "npm:^26.6.3"
-    jsdoc: "npm:^3.6.7"
-    rollup: "npm:^4.28.0"
-    semantic-release: "npm:^18.0.0"
-    tsd-jsdoc: "npm:^2.5.0"
-  peerDependencies:
-    next: ^9.5.0 || ^10.2.1 || ^11.1.0 || ^12.1.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
-  languageName: unknown
-  linkType: soft
 
 "nice-try@npm:^1.0.4":
   version: 1.0.5

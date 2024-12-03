@@ -1,6 +1,6 @@
 {
   "name": "@levers-inc/next-safe",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Trezy <tre@trezy.com>",
   "license": "BSD-3-Clause",
   "exports": {
@@ -18,9 +18,9 @@
     "types"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "build-types": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
-    "preversion": "yarn test && yarn build && yarn build-types",
+    "build:lib": "rollup -c",
+    "build:types": "jsdoc -t node_modules/tsd-jsdoc/dist -r lib/. -d types",
+    "build": "yarn build:lib && yarn build:types",
     "postversion": "npm publish",
     "test": "jest"
   },
